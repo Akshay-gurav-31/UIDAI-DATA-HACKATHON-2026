@@ -188,9 +188,11 @@ def create_submission():
     arch_img = os.path.join(BASE_DIR, "final_submission", "images", "High-Level System Architecture.png")
     
     if os.path.exists(arch_img):
+        doc.add_paragraph() # Top Padding
         doc.add_picture(arch_img, width=Inches(6.0)) 
         doc.paragraphs[-1].alignment = WD_ALIGN_PARAGRAPH.CENTER
         doc.add_paragraph("Figure 1: High-Level System Architecture & Data Flow", style='Caption').alignment = WD_ALIGN_PARAGRAPH.CENTER
+        doc.add_paragraph() # Bottom Padding
     else:
         print(f"Warning: Architecture diagram not found at {arch_img}")
 
