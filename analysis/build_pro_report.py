@@ -183,27 +183,16 @@ def create_submission():
         style='List Number'
     )
 
-    # EXHIBIT SVG - System Architecture
-    svg_arch = os.path.join(BASE_DIR, "final_submission", "report_pages", "High-Level System Architecture.svg")
-    # Also check if PNG exists as fallback/alternative if SVG fails to render in older Word
-    png_arch = os.path.join(IMAGE_DIR, "system_architecture.png") 
+    # EXHIBIT - System Architecture
+    # Using PNG version for better compatibility and because SVG was converted/renamed
+    arch_img = os.path.join(BASE_DIR, "final_submission", "report_pages", "High-Level System Architecture.png")
     
-    # Try embedding SVG directly (Works in newer Word/DOCX)
-    if os.path.exists(svg_arch):
-        try:
-            doc.add_picture(svg_arch, width=Inches(6.0)) # Wider format for architecture
-            doc.paragraphs[-1].alignment = WD_ALIGN_PARAGRAPH.CENTER
-            doc.add_paragraph("Figure 1: High-Level System Architecture & Data Flow", style='Caption').alignment = WD_ALIGN_PARAGRAPH.CENTER
-        except Exception as e:
-            print(f"SVG Insertion Warning: {e}. Falling back to PNG if available.")
-            if os.path.exists(png_arch):
-                 doc.add_picture(png_arch, width=Inches(6.0))
-                 doc.paragraphs[-1].alignment = WD_ALIGN_PARAGRAPH.CENTER
-                 doc.add_paragraph("Figure 1: High-Level System Architecture & Data Flow", style='Caption').alignment = WD_ALIGN_PARAGRAPH.CENTER
-    elif os.path.exists(png_arch):
-         doc.add_picture(png_arch, width=Inches(6.0))
-         doc.paragraphs[-1].alignment = WD_ALIGN_PARAGRAPH.CENTER
-         doc.add_paragraph("Figure 1: High-Level System Architecture & Data Flow", style='Caption').alignment = WD_ALIGN_PARAGRAPH.CENTER
+    if os.path.exists(arch_img):
+        doc.add_picture(arch_img, width=Inches(6.0)) 
+        doc.paragraphs[-1].alignment = WD_ALIGN_PARAGRAPH.CENTER
+        doc.add_paragraph("Figure 1: High-Level System Architecture & Data Flow", style='Caption').alignment = WD_ALIGN_PARAGRAPH.CENTER
+    else:
+        print(f"Warning: Architecture diagram not found at {arch_img}")
 
     # HARD PAGE BREAK before Section 5 to ensure consistent start
     doc.add_page_break()
