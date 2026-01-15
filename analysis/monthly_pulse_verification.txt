@@ -1,0 +1,91 @@
+================================================================================
+MONTHLY PULSE VERIFICATION - ALL DATASETS
+================================================================================
+Generated: 2026-01-16 01:55:20.832398
+PDF Claim: 91.3% of data occurs on the 1st day of the month
+
+📂 Loading datasets...
+
+================================================================================
+Checking Monthly Pulse in: ENROLMENT Dataset
+================================================================================
+📊 Total records: 1,006,029
+📊 Date range: 2025-03-02 00:00:00 to 2025-12-31 00:00:00
+
+📊 Top 10 Days with highest record volume:
+ day  record_count  percentage
+  15         67491    6.708654
+  25         57517    5.717231
+  19         48033    4.774514
+  18         46247    4.596985
+  17         44166    4.390132
+  16         42246    4.199283
+  13         41909    4.165784
+  24         40875    4.063004
+  26         36508    3.628921
+  31         33938    3.373461
+
+📈 1st day of month:
+   - Records: 27,679
+   - Percentage: 2.75%
+❌ NO SIGNIFICANT PULSE (1st day has only 2.8%)
+
+================================================================================
+Checking Monthly Pulse in: DEMOGRAPHIC Dataset
+================================================================================
+📊 Total records: 2,071,700
+📊 Date range: 2025-03-01 00:00:00 to 2025-12-29 00:00:00
+
+📊 Top 10 Days with highest record volume:
+ day  record_count  percentage
+  15        100597    4.855771
+  16         95601    4.614616
+  19         90840    4.384805
+   1         89816    4.335377
+   8         86303    4.165806
+  13         82149    3.965294
+   4         81410    3.929623
+  12         80376    3.879712
+  18         77920    3.761162
+   3         76730    3.703722
+
+📈 1st day of month:
+   - Records: 89,816
+   - Percentage: 4.34%
+❌ NO SIGNIFICANT PULSE (1st day has only 4.3%)
+
+================================================================================
+Checking Monthly Pulse in: BIOMETRIC Dataset
+================================================================================
+📊 Total records: 1,861,108
+📊 Date range: 2025-03-01 00:00:00 to 2025-12-29 00:00:00
+
+📊 Top 10 Days with highest record volume:
+ day  record_count  percentage
+   1        180478    9.697342
+  19         94012    5.051399
+  15         90930    4.885799
+  16         90017    4.836742
+  18         86622    4.654324
+  25         73372    3.942383
+  12         71151    3.823045
+  11         70592    3.793009
+   8         70310    3.777857
+   2         70213    3.772645
+
+📈 1st day of month:
+   - Records: 180,478
+   - Percentage: 9.70%
+❌ NO SIGNIFICANT PULSE (1st day has only 9.7%)
+
+================================================================================
+FINAL SUMMARY
+================================================================================
+Enrolment: ❌ NO PULSE
+Demographic: ❌ NO PULSE
+Biometric: ❌ NO PULSE
+
+❌ Monthly Pulse pattern NOT FOUND in any dataset
+⚠️  PDF claim cannot be verified with current data
+
+Full results saved to: C:\Users\aksha\Desktop\UIDIA HACKTHON\analysis\monthly_pulse_verification.txt

@@ -215,7 +215,7 @@ def create_submission():
 
     # Finding 1
     doc.add_heading("5.1 Structural Inconsistency: Ghost Districts", level=2)
-    doc.add_paragraph("Naming mismatches (e.g., 'Bengaluru Urban' vs 'Bengaluru South') obscure data linkage. We identified 47 districts with 234,567 enrolments but zero updates: a 6.5% rate vs <2% industry benchmark.")
+    doc.add_paragraph("Naming mismatches (e.g., 'Bengaluru Urban' vs 'Bengaluru South') obscure data linkage. We identified 35 districts with 87,882 enrolments but zero updates due to cross-API naming inconsistencies.")
     
     # Truth Table
     doc.add_paragraph() # Spacer
@@ -248,22 +248,30 @@ def create_submission():
     # HARD PAGE BREAK after Exhibit A as requested
     doc.add_page_break()
 
-    # Finding 2
-    doc.add_heading("5.2 Reporting Latency: Monthly Pulse Pattern", level=2)
-    doc.add_paragraph("91.3% of data occurs on the 1st day of the month. This proves a 30-day monitoring gap that obscures real-world societal trends.")
+    # Finding 2 - Monthly Enrollment Trends (NEW - Validated)
+    doc.add_heading("5.2 Seasonal Enrollment Patterns: Monthly Trends Analysis", level=2)
+    doc.add_paragraph(
+        "Analysis of monthly enrollment data reveals significant seasonal variation (Coefficient of Variation: 79.86%). "
+        "September emerges as the peak enrollment month with 1.48 million registrations (27.15% of total), "
+        "while the second half of the year (July-December) accounts for 607% more enrollments than the first half. "
+        "This pattern indicates strong seasonal drivers in Aadhaar registration, with age group 0-5 dominating most months, "
+        "suggesting family-based enrollment campaigns or school admission requirements driving registration behavior."
+    )
     
-    # EXHIBIT B
-    img_b = os.path.join(IMAGE_DIR, "system_pulse_v2.png")
-    if os.path.exists(img_b):
-        doc.add_picture(img_b, width=Inches(5.0))
+    # EXHIBIT B - Monthly Trends
+    img_monthly = os.path.join(IMAGE_DIR, "monthly_enrollment_trends_v2.png")
+    if os.path.exists(img_monthly):
+        doc.add_paragraph() # Spacer
+        doc.add_picture(img_monthly, width=Inches(5.5))
         doc.paragraphs[-1].alignment = WD_ALIGN_PARAGRAPH.CENTER
-        doc.add_paragraph("Exhibit B: Visualization of Administrative Batch Processing Delay", style='Caption').alignment = WD_ALIGN_PARAGRAPH.CENTER
+        doc.add_paragraph("Exhibit B: Monthly Enrollment Trends and Age Group Distribution", style='Caption').alignment = WD_ALIGN_PARAGRAPH.CENTER
+        doc.add_paragraph() # Spacer
 
-    # Finding 3
+    # Finding 3 (formerly Finding 2)
     doc.add_heading("5.3 Administrative Bottlenecks: Process Coupling", level=2)
-    doc.add_paragraph("A near-perfect Pearson correlation (r = 0.99, p < 0.001) between child and adult updates indicates forced synchronization at the operational level.")
+    doc.add_paragraph("A strong Pearson correlation (r = 0.85, p < 0.001) between child and adult updates indicates synchronized bulk processing at the operational level.")
     
-    # EXHIBIT C
+    # EXHIBIT C (formerly B)
     img_c = os.path.join(IMAGE_DIR, "adult_tsunami_v2.png")
     if os.path.exists(img_c):
         doc.add_picture(img_c, width=Inches(5.0))
@@ -272,7 +280,13 @@ def create_submission():
 
     # --- 6. IMPACT & POLICY RECOMMENDATIONS ---
     doc.add_heading('6. IMPACT & POLICY RECOMMENDATIONS', level=1)
-    doc.add_paragraph("• Recovery of Missing Data: Reclaiming monitoring for 234K+ records from Ghost Districts.\n• Peak Load Reduction: Staggering reporting windows to reduce server strain by ~70%.\n• LGD Synchronization: Mandatory use of Local Government Directory codes as API primary keys.", style='List Bullet')
+    doc.add_paragraph(
+        "• Recovery of Missing Data: Reclaiming monitoring for 88K+ records from Ghost Districts.\n"
+        "• Seasonal Campaign Optimization: Leverage September peak patterns to allocate resources efficiently and plan targeted enrollment drives.\n"
+        "• LGD Synchronization: Mandatory use of Local Government Directory codes as API primary keys to prevent naming mismatches.\n"
+        "• Process Decoupling: Separate child and adult update workflows to enable organic, real-time monitoring.",
+        style='List Bullet'
+    )
 
     # --- 7. TECHNICAL SPECIFICATIONS & REPRODUCIBILITY ---
     doc.add_heading('7. TECHNICAL SPECIFICATIONS & REPRODUCIBILITY', level=1)
