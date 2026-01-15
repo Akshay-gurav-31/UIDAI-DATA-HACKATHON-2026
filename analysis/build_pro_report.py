@@ -17,8 +17,8 @@ except ImportError:
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 IMAGE_DIR = os.path.join(BASE_DIR, "final_submission", "images")
 LOGO_PATH = os.path.join(IMAGE_DIR, "TEAM-EKLAVYA-logo.png")
-OUTPUT_DOCX = os.path.join(BASE_DIR, "final_submission", "Team_Eklavya_Submission_FINAL_ULTIMATE.docx")
-OUTPUT_PDF = os.path.join(BASE_DIR, "final_submission", "Team_Eklavya_Submission_FINAL_ULTIMATE.pdf")
+OUTPUT_DOCX = os.path.join(BASE_DIR, "final_submission", "Team_Eklavya_Submission_FINAL.docx")
+OUTPUT_PDF = os.path.join(BASE_DIR, "final_submission", "Team_Eklavya_Submission_FINAL.pdf")
 
 # Professional Colors
 COLOR_PRIMARY = RGBColor(0, 51, 102)    # Dark Navy (Policy Grade)
