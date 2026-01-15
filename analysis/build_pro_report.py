@@ -183,6 +183,9 @@ def create_submission():
         style='List Number'
     )
 
+    # HARD PAGE BREAK before Section 5 to ensure consistent start
+    doc.add_page_break()
+
     # --- 5. ANALYSIS & KEY FINDINGS ---
     doc.add_heading('5. ANALYSIS & KEY FINDINGS', level=1)
 
@@ -190,10 +193,8 @@ def create_submission():
     doc.add_heading("5.1 Structural Inconsistency: Ghost Districts", level=2)
     doc.add_paragraph("Naming mismatches (e.g., 'Bengaluru Urban' vs 'Bengaluru South') obscure data linkage. We identified 47 districts with 234,567 enrolments but zero updates: a 6.5% rate vs <2% industry benchmark.")
     
-    # HARD PAGE BREAK before Ground Truth
-    doc.add_page_break()
-    
     # Truth Table
+    doc.add_paragraph() # Spacer
     doc.add_paragraph("Ground Truth Verification (Sample Audit):", style='Normal').runs[0].bold = True
     table = doc.add_table(rows=1, cols=3)
     table.style = 'Table Grid'
@@ -213,6 +214,7 @@ def create_submission():
         row[0].text = e; row[1].text = u; row[2].text = s
 
     # EXHIBIT A
+    doc.add_paragraph() # Spacer
     img_a = os.path.join(IMAGE_DIR, "naming_trap_v2.png")
     if os.path.exists(img_a):
         doc.add_picture(img_a, width=Inches(5.0))
