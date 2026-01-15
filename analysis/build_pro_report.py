@@ -75,6 +75,32 @@ def configure_styles(doc):
     h2.font.bold = True
     h2.font.color.rgb = RGBColor(60, 60, 60)
 
+def add_page_number(doc):
+    """Adds page numbers to the bottom-right of every page via the footer."""
+    for section in doc.sections:
+        footer = section.footer
+        p = footer.paragraphs[0]
+        p.alignment = WD_ALIGN_PARAGRAPH.RIGHT
+        
+        # Add Page Number field
+        run = p.add_run()
+        run.font.size = Pt(10)
+        run.font.color.rgb = RGBColor(120, 120, 120)  # Grey
+        
+        fldChar1 = OxmlElement('w:fldChar')
+        fldChar1.set(qn('w:fldCharType'), 'begin')
+        
+        instrText = OxmlElement('w:instrText')
+        instrText.set(qn('xml:space'), 'preserve')
+        instrText.text = "PAGE"
+        
+        fldChar2 = OxmlElement('w:fldChar')
+        fldChar2.set(qn('w:fldCharType'), 'end')
+        
+        run._r.append(fldChar1)
+        run._r.append(instrText)
+        run._r.append(fldChar2)
+
 def create_submission():
     cleanup_old_files()
     doc = Document()
@@ -107,7 +133,7 @@ def create_submission():
     p_link.add_run("Live Audit Terminal: ").bold = True
     create_hyperlink(p_link, "https://uidia-dashboard.vercel.app/", "https://uidia-dashboard.vercel.app/")
     
-    doc.add_paragraph("__________________________________________________________________________________").alignment = WD_ALIGN_PARAGRAPH.CENTER
+    # doc.add_paragraph("__________________________________________________________________________________").alignment = WD_ALIGN_PARAGRAPH.CENTER
 
     # --- 1. EXECUTIVE SUMMARY ---
     doc.add_heading('1. EXECUTIVE SUMMARY', level=1)
@@ -163,6 +189,9 @@ def create_submission():
     # Finding 1
     doc.add_heading("5.1 Structural Inconsistency: Ghost Districts", level=2)
     doc.add_paragraph("Naming mismatches (e.g., 'Bengaluru Urban' vs 'Bengaluru South') obscure data linkage. We identified 47 districts with 234,567 enrolments but zero updates: a 6.5% rate vs <2% industry benchmark.")
+    
+    # HARD PAGE BREAK before Ground Truth
+    doc.add_page_break()
     
     # Truth Table
     doc.add_paragraph("Ground Truth Verification (Sample Audit):", style='Normal').runs[0].bold = True
@@ -241,6 +270,9 @@ def create_submission():
     doc.add_heading('9. CONCLUSION', level=1)
     doc.add_paragraph("Team Eklavya's framework successfully maps structural gaps in the Aadhaar data ecosystem. By addressing naming inconsistencies and batch-reporting latencies, UIDAI can move towards a truly real-time data monitoring model, ensuring that societal trends are unlocked for better governance.")
 
+    # Apply Page Numbering
+    add_page_number(doc)
+
     # Footer
     p_last = doc.add_paragraph()
     p_last.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -260,4 +292,5 @@ def create_submission():
 
 if __name__ == "__main__":
     create_submission()
+
 
