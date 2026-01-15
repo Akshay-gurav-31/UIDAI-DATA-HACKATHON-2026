@@ -116,7 +116,7 @@ For step-by-step verification, run the notebooks in `notebooks/`:
 *   `04_correlation_study.ipynb`: Process Coupling.
 *   `05_dashboard_demo.ipynb`: Visualization Code.
 
-**GitHub Repository:** [team-eklavya/uidai-hackathon-2026](https://github.com/teameklavya/uidai-hackathon-2026)
+**GitHub Repository:** [Akshay-gurav-31/UIDAI-DATA-HACKATHON-2026](https://github.com/Akshay-gurav-31/UIDAI-DATA-HACKATHON-2026)
 
 ---
 

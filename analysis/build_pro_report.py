@@ -222,7 +222,7 @@ def create_submission():
     
     doc.add_paragraph("Reproducibility (GitHub Repository):").bold = True
     p_git = doc.add_paragraph("Complete source code, 5 interactive Jupyter notebooks, and methodology validation logs:")
-    create_hyperlink(p_git, "https://github.com/teameklavya/uidai-hackathon-2026", "https://github.com/teameklavya/uidai-hackathon-2026")
+    create_hyperlink(p_git, "https://github.com/Akshay-gurav-31/UIDAI-DATA-HACKATHON-2026", "https://github.com/Akshay-gurav-31/UIDAI-DATA-HACKATHON-2026")
 
     # Code snippet for technical review
     code_snippet = "def detect_ghosts(df):\n    df['intense'] = df['total_updates'] / (df['total_enrol'] + 1)\n    return df[df['total_enrol'] > 1000 & (stats.zscore(df['intense']) < -2.0)]"
