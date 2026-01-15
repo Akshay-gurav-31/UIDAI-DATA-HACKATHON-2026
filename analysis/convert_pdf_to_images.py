@@ -2,7 +2,7 @@ import fitz  # PyMuPDF
 import os
 
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-PDF_PATH = os.path.join(BASE_DIR, "final_submission", "Team_Eklavya_Submission_FINAL.pdf")
+PDF_PATH = os.path.join(BASE_DIR, "final_submission", "Team_Eklavya_Submission_FINAL_v5.pdf")
 OUTPUT_DIR = os.path.join(BASE_DIR, "final_submission", "report_pages")
 
 def convert_pdf_to_images():
