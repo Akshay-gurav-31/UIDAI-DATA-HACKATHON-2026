@@ -17,8 +17,8 @@ except ImportError:
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 IMAGE_DIR = os.path.join(BASE_DIR, "final_submission", "images")
 LOGO_PATH = os.path.join(IMAGE_DIR, "TEAM-EKLAVYA-logo.png")
-OUTPUT_DOCX = os.path.join(BASE_DIR, "final_submission", "Team_Eklavya_Submission_FINAL_v5.docx")
-OUTPUT_PDF = os.path.join(BASE_DIR, "final_submission", "Team_Eklavya_Submission_FINAL_v5.pdf")
+OUTPUT_DOCX = os.path.join(BASE_DIR, "final_submission", "Team_Eklavya_Submission_FINAL.docx")
+OUTPUT_PDF = os.path.join(BASE_DIR, "final_submission", "Team_Eklavya_Submission_FINAL.pdf")
 
 # Professional Colors
 COLOR_PRIMARY = RGBColor(0, 51, 102)    # Dark Navy (Policy Grade)
@@ -189,7 +189,7 @@ def create_submission():
     
     if os.path.exists(arch_img):
         doc.add_paragraph() # Top Padding
-        doc.add_picture(arch_img, width=Inches(6.0)) 
+        doc.add_picture(arch_img, width=Inches(5.0)) 
         doc.paragraphs[-1].alignment = WD_ALIGN_PARAGRAPH.CENTER
         doc.add_paragraph("Figure 1: High-Level System Architecture & Data Flow", style='Caption').alignment = WD_ALIGN_PARAGRAPH.CENTER
         doc.add_paragraph() # Bottom Padding
