@@ -1,0 +1,15 @@
+# Data
+UIDIA-Datasets/
+*.csv
+!analysis/results/*.csv
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# OS
+.DS_Store
+Thumbs.db
