@@ -3,7 +3,8 @@ import numpy as np
 import data_loader
 import os
 
-OUTPUT_DIR = r"c:/Users/aksha/Desktop/UIDIA HACKTHON/analysis/results"
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+OUTPUT_DIR = os.path.join(BASE_DIR, "analysis", "results")
 
 def process_daily_trends(bio, demo, enrol):
     print("Generating Daily Trends...")

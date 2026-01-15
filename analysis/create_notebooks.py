@@ -1,7 +1,8 @@
 import nbformat as nbf
 import os
 
-NOTEBOOKS_DIR = r"c:/Users/aksha/Desktop/UIDIA HACKTHON/notebooks"
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+NOTEBOOKS_DIR = os.path.join(BASE_DIR, "notebooks")
 if not os.path.exists(NOTEBOOKS_DIR):
     os.makedirs(NOTEBOOKS_DIR)
 

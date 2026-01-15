@@ -14,7 +14,7 @@ except ImportError:
     PDF_ENABLED = False
     print("WARNING: docx2pdf not installed. PDF generation will be skipped.")
 
-BASE_DIR = r"c:/Users/aksha/Desktop/UIDIA HACKTHON"
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 IMAGE_DIR = os.path.join(BASE_DIR, "final_submission", "images")
 LOGO_PATH = os.path.join(IMAGE_DIR, "TEAM-EKLAVYA-logo.png")
 OUTPUT_DOCX = os.path.join(BASE_DIR, "final_submission", "Team_Eklavya_Submission_FINAL.docx")

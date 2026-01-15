@@ -3,7 +3,7 @@ from docx.shared import Inches, Pt
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 import os
 
-BASE_DIR = r"c:/Users/aksha/Desktop/UIDIA HACKTHON"
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 IMAGE_DIR = os.path.join(BASE_DIR, "final_submission", "images")
 LOGO_PATH = os.path.join(IMAGE_DIR, "TEAM-EKLAVYA-logo.png")
 

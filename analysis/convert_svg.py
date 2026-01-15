@@ -1,8 +1,9 @@
 import cairosvg
 import os
 
-SVG_PATH = r"c:/Users/aksha/Desktop/UIDIA HACKTHON/final_submission/report_pages/High-Level System Architecture.svg"
-PNG_PATH = r"c:/Users/aksha/Desktop/UIDIA HACKTHON/final_submission/images/system_architecture.png"
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+SVG_PATH = os.path.join(BASE_DIR, "final_submission", "report_pages", "High-Level System Architecture.svg")
+PNG_PATH = os.path.join(BASE_DIR, "final_submission", "images", "system_architecture.png")
 
 def convert_architecture_diagram():
     if not os.path.exists(SVG_PATH):

@@ -2,7 +2,7 @@ import pandas as pd
 import glob
 import os
 
-BASE_DIR = r"c:/Users/aksha/Desktop/UIDIA HACKTHON/UIDIA-Datasets"
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'UIDIA-Datasets'))
 
 def load_dataset(folder_name):
     path = os.path.join(BASE_DIR, folder_name, "*.csv")

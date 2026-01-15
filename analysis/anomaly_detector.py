@@ -4,17 +4,15 @@ from scipy import stats
 import os
 
 # Configuration
-DISTRICT_PROFILE = r"analysis/results/district_profile.csv"
-OUTPUT_DIR = r"analysis/results"
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+DISTRICT_PROFILE = os.path.join(BASE_DIR, "analysis", "results", "district_profile.csv")
+OUTPUT_DIR = os.path.join(BASE_DIR, "analysis", "results")
 THRESH_ENROL_MIN = 1000  # Minimum records for district significance
 THRESH_UPDATE_ZERO = 0   
 
 def load_data():
     """Load district profile for analysis."""
     if not os.path.exists(DISTRICT_PROFILE):
-        alt_path = r"c:/Users/aksha/Desktop/UIDIA HACKTHON/analysis/results/district_profile.csv"
-        if os.path.exists(alt_path):
-            return pd.read_csv(alt_path)
         raise FileNotFoundError(f"Missing data: {DISTRICT_PROFILE}")
     return pd.read_csv(DISTRICT_PROFILE)
 

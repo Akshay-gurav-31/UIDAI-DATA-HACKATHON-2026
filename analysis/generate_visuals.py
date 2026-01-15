@@ -20,7 +20,7 @@ UIDAI_NEUTRAL = "#7F8C8D"   # Asbestos Gray
 plt.rcParams['font.family'] = 'sans-serif'
 plt.rcParams['font.sans-serif'] = ['Arial', 'Calibri', 'DejaVu Sans']
 
-BASE_DIR = r"c:/Users/aksha/Desktop/UIDIA HACKTHON"
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 IMAGE_DIR = os.path.join(BASE_DIR, "final_submission", "images")
 RESULTS_DIR = os.path.join(BASE_DIR, "analysis", "results")
 
