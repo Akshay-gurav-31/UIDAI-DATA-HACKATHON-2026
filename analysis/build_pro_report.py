@@ -196,6 +196,17 @@ def create_submission():
     else:
         print(f"Warning: Architecture diagram not found at {arch_img}")
 
+    # SECOND ARCHITECTURE DIAGRAM - Sovereign Data Trust
+    trust_img = os.path.join(BASE_DIR, "final_submission", "images", "Sovereign Data Trust Architecture_ A 3D Layered Pyramid Diagram - visual selection.png")
+    if os.path.exists(trust_img):
+        doc.add_paragraph() # Spacer
+        doc.add_picture(trust_img, width=Inches(4.5)) # Slightly smaller to fit bottom of page
+        doc.paragraphs[-1].alignment = WD_ALIGN_PARAGRAPH.CENTER
+        doc.add_paragraph("Figure 2: Sovereign Data Trust & Integrity Framework", style='Caption').alignment = WD_ALIGN_PARAGRAPH.CENTER
+        doc.add_paragraph() # Final bottom padding
+    else:
+        print(f"Warning: Trust diagram not found at {trust_img}")
+
     # HARD PAGE BREAK before Section 5 to ensure consistent start
     doc.add_page_break()
 
