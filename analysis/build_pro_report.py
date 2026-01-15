@@ -185,7 +185,7 @@ def create_submission():
 
     # EXHIBIT - System Architecture
     # Using PNG version for better compatibility and because SVG was converted/renamed
-    arch_img = os.path.join(BASE_DIR, "final_submission", "report_pages", "High-Level System Architecture.png")
+    arch_img = os.path.join(BASE_DIR, "final_submission", "images", "High-Level System Architecture.png")
     
     if os.path.exists(arch_img):
         doc.add_picture(arch_img, width=Inches(6.0)) 
