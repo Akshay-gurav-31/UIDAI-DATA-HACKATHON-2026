@@ -219,6 +219,9 @@ def create_submission():
         doc.paragraphs[-1].alignment = WD_ALIGN_PARAGRAPH.CENTER
         doc.add_paragraph("Exhibit A: Ghost District Identification via Cross-API Analysis", style='Caption').alignment = WD_ALIGN_PARAGRAPH.CENTER
 
+    # HARD PAGE BREAK after Exhibit A as requested
+    doc.add_page_break()
+
     # Finding 2
     doc.add_heading("5.2 Reporting Latency: Monthly Pulse Pattern", level=2)
     doc.add_paragraph("91.3% of data occurs on the 1st day of the month. This proves a 30-day monitoring gap that obscures real-world societal trends.")
