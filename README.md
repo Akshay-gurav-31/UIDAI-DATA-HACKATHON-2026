@@ -79,7 +79,7 @@ Professional-grade automation for immediate audit execution.
 ## 👥 Meet the Team
 
 <p align="center">
-  <img src="team/team.png" width="800" alt="Team Eklavya Group">
+  <img src="final_submission/images/team.png" width="800" alt="Team Eklavya Group">
 </p>
 
 | Name | Role | LinkedIn |
