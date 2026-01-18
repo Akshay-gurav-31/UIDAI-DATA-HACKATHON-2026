@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="final_submission/images/TEAM-EKLAVYA-logo.png" width="250" alt="Team Eklavya Logo">
+</p>
+
 # 📡 UIDAI Intelligent Audit Framework: Team Eklavya
 
 [![GitHub License](https://img.shields.io/badge/Audit-Statistical-blue.svg)](https://github.com/Akshay-gurav-31/UIDAI-DATA-HACKATHON-2026)
