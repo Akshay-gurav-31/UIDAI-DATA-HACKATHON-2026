@@ -1,5 +1,0 @@
-=== STATISTICAL VALIDATION REPORT ===
-1. T-Test (Welch's): p-value = 4.24611e-81
-   -> Result: STATISTICALLY SIGNIFICANT. Ghost Districts are a distinct population.
-2. Effect Size: Normal districts have 27.0163 updates/enrolment, Ghosts have 0.0.
-3. Detection Count: 13 districts identified as Ghosts out of 1132 total districts.

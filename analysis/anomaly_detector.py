@@ -100,7 +100,7 @@ def main():
             os.makedirs(OUTPUT_DIR)
             
         ghosts.to_csv(os.path.join(OUTPUT_DIR, "ghost_districts.csv"), index=False)
-        processed_df.to_csv(os.path.join(OUTPUT_DIR, "district_profile_scored.csv"), index=False)
+        processed_df.to_csv(os.path.join(OUTPUT_DIR, "district_anomalies.csv"), index=False)
         
         # Validation
         print("Running Validation Protocol...")
@@ -110,10 +110,10 @@ def main():
             f.write(validation_report)
             
         print(validation_report)
-        print("✅ Analysis Complete. Results saved to analysis/results/")
+        print("Analysis Complete. Results saved to analysis/results/")
         
     except Exception as e:
-        print(f"❌ Analysis Failed: {e}")
+        print(f"Analysis Failed: {e}")
 
 if __name__ == "__main__":
     main()
