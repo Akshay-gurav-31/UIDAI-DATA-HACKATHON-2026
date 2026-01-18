@@ -75,4 +75,22 @@ Professional-grade automation for immediate audit execution.
 * **Live Demo:** [Eklavya Prototype](https://github.com/Akshay-gurav-31/UIDAI-DATA-HACKATHON-2026)
 
 ---
+
+## 👥 Meet the Team
+
+<p align="center">
+  <img src="team/team.png" width="800" alt="Team Eklavya Group">
+</p>
+
+| Name | Role | LinkedIn |
+| :--- | :--- | :--- |
+| **Yesha Parwani** | Team Leader | [Profile](https://www.linkedin.com/in/yesha-parwani/) |
+| **Akshay Gurav** | Developer / Analyst | [Profile](https://www.linkedin.com/in/akshay---gurav/) |
+| **Shreyash Kumar** | Research Lead | [Profile](https://www.linkedin.com/in/shreyash-kumar-9774b622a/) |
+| **Ashit Patel** | Data Analyst | [Profile](https://www.linkedin.com/in/ashit-patel-163815226/) |
+| **Nishita Chhabaria** | Documentation Support | [Profile](https://www.linkedin.com/in/nishita-chhabaria-a626582a0/) |
+
+---
+
 **Disclaimer:** All data utilized is anonymized synthetic/sample data provided by the UIDAI public portal for hackathon purposes.
+
