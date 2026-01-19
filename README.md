@@ -82,7 +82,7 @@ Check the `final_submission/` directory for the professional PDF report and the 
 ## 🏆 Submission Deliverables
 
 * **Executive Summary:** [Team_Eklavya_Submission_FINAL.pdf](final_submission/Team_Eklavya_Submission_FINAL.pdf)
-* **Technical Evidence:** See `/notebooks` for Z-score and T-test validation logs.
+* **Technical Evidence:** See `/notebooks` for the Robust IQR Engine (handling Pareto-distributed skew) and Syntax Bridge logic (O(n) phonetic entity resolution).
 * **Live Demo:** [Eklavya Prototype](https://github.com/Akshay-gurav-31/UIDAI-DATA-HACKATHON-2026)
 
 ---
