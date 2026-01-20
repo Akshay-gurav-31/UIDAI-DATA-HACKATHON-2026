@@ -81,8 +81,7 @@ Check the `final_submission/` directory for the professional PDF report and the 
 
 ## 🏆 Submission Deliverables
 
-* **Executive Summary:** [Team_Eklavya_Submission_FINAL.pdf](UIDAI-DATA-HACKATHON-2026
-/final_submission)
+* **Executive Summary:** [Team_Eklavya_Submission_FINAL.pdf](https://github.com/Akshay-gurav-31/UIDAI-DATA-HACKATHON-2026/blob/main/final_submission/UIDAI%20DATA%20HACKATH_Team%20EKLAVYA_2026.pdf)
 * **Technical Evidence:** See `/notebooks` for the Robust IQR Engine (handling Pareto-distributed skew) and Syntax Bridge logic (O(n) phonetic entity resolution).
 * **Live Demo:** [Eklavya Prototype](https://github.com/Akshay-gurav-31/UIDAI-DATA-HACKATHON-2026)
 
