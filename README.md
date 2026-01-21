@@ -2,12 +2,12 @@
   <img src="final_submission/images/TEAM-EKLAVYA-logo.png" width="250" alt="Team Eklavya Logo">
 </p>
 
-# 📡 UIDAI Intelligent Audit Framework: Team Eklavya
+# **📡 UIDAI Intelligent Audit Framework: Team Eklavya**
 
 [![GitHub License](https://img.shields.io/badge/Audit-Statistical-blue.svg)](https://github.com/Akshay-gurav-31/UIDAI-DATA-HACKATHON-2026)
 [![Platform](https://img.shields.io/badge/Platform-UIDAI_Data_Hackathon-orange.svg)](#)
 
-### **Intelligent Ingestion Middleware for the Aadhaar Ecosystem**
+## **<ins>Intelligent Ingestion Middleware for the Aadhaar Ecosystem</ins>**
 
 This framework acts as an active gatekeeper designed to intercept and fix data errors before they enter the national database. By replacing standard Z-Scores with the Robust IQR method and using phonetic blocking, the system handles skewed data effectively. This allows for high-precision anomaly detection that avoids false alarms in high-volume metro cities, ensuring that only true errors are flagged.
 ---
