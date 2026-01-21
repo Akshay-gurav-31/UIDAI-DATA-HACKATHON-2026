@@ -128,4 +128,4 @@ Check the `final_submission/` directory for the professional PDF report and the 
 
 ---
 
-**Disclaimer:** All data utilized is anonymized synthetic/sample data provided by the UIDAI public portal for hackathon purposes.
+**Disclaimer:** All data utilized is anonymized synthetic/sample data provided by the UIDAI public portal for the hackathon purposes.
