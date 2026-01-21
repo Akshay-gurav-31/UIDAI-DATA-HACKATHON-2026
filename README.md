@@ -10,6 +10,7 @@
 ## <ins>Intelligent Ingestion Middleware for the Aadhaar Ecosystem</ins>
 
 <p>This framework acts as an active gatekeeper designed to intercept and fix data errors before they enter the national database. By replacing standard Z-Scores with the Robust IQR method and using phonetic blocking, the system handles skewed data effectively. This allows for high-precision anomaly detection that avoids false alarms in high-volume metro cities, ensuring that only true errors are flagged.</p>
+
 ---
 
 ## 🏗️ System Architecture & Data Pipeline
